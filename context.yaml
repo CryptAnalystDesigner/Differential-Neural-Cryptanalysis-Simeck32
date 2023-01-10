@@ -1,0 +1,48 @@
+calls:
+- max_evals: 50
+  timeout: null
+search:
+  acq_func: UCB
+  acq_optimizer: auto
+  evaluator:
+    address: null
+    callbacks: list
+    num_cpus: 7
+    num_cpus_per_task: 1
+    num_gpus: 7
+    num_gpus_per_task: 1
+    num_workers: 7
+    password: null
+    ray_kwargs: null
+    run_function: function
+    run_function_kwargs: {}
+    type: RayEvaluator
+  filter_duplicated: true
+  filter_failures: mean
+  initial_points:
+  - - relu
+    - 3000
+    - 256
+    - 64
+    - 5
+    - 0.002
+    - 32
+    - 1.0e-05
+  kappa: 1.96
+  log_dir: /home/data/zhangliu/cryptanalysis/deep_learning_cryptanalysis/multiple_pairs_simeck
+  max_failures: 100
+  moo_scalarization_strategy: Chebyshev
+  moo_scalarization_weight: null
+  multi_point_strategy: cl_min
+  n_initial_points: 10
+  n_jobs: 1
+  n_points: 10000
+  num_workers: 7
+  problem: HpProblem
+  random_state: RandomState
+  surrogate_model: RF
+  sync_communication: false
+  type: CBO
+  update_prior: false
+  verbose: 0
+  xi: 0.001
